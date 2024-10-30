@@ -1,0 +1,23 @@
+<h3>%%%app_display_name%%% Options</h3>
+<table class="form-table">
+    <tbody>
+    <tr>
+        <th><label>Status</label></th>
+        <td>
+            <span id="launchkey-paired-status" class="launchkey-status-indicator launchkey-box-red">Not Paired</span>
+        </td>
+    </tr>
+    <tr>
+        <th><label>LaunchKey Username</label></th>
+        <td>
+            <form method="POST">
+                <input type="hidden" name="launchkey_nonce" value="%%%nonce%%%" />
+                <input type="text" name="launchkey_username" placeholder="%%%app_display_name%%% username" required="required" />
+                <span class="description">Enter your "%%%app_display_name%%% username to pair your account for passwordless login.</span>
+                <br />
+                <span class="description">Note: Once paired, you will be able to remove your WordPress password and prevent password based login with your user.</span>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>

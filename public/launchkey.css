@@ -1,0 +1,241 @@
+/** BEGIN BUTTONS **/
+
+/****************************/
+/*** Common Button Styles ***/
+/****************************/
+a.lkloginbtn{ display: inline-block; position: relative; background-color: #0159e5; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px; text-decoration: none; text-transform: none; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; cursor: pointer; outline: none; }
+a.lkloginbtn.hidden{ display: none }
+a.lkloginbtn:hover{ background-color: #0062ff; }
+a.lkloginbtn:active{ background-color: #0052d4; }
+a.lkloginbtn span.icon{ position: absolute; margin: 0; padding: 0; background: transparent url('launchkey-logo-white.png') no-repeat 5px center; }
+a.lkloginbtn.light span.icon{ background: transparent url('launchkey-logo-blue.png') no-repeat 5px center; }
+a.lkloginbtn span.text{ display: inline-block; color: #fff; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1em; font-weight: 700; letter-spacing: .01em; margin: 0; padding: 0; }
+
+/*******************/
+/*** SIZE: LARGE ***/
+/*******************/
+a.lkloginbtn.large, div.processing.large{ min-width: 60px; min-height: 60px; padding: 2px 4px; }
+a.lkloginbtn.large span.text{ font-size: 19px; padding-left: 65px; line-height: 60px; padding: 0 15px 0 65px; }
+a.lkloginbtn.large span.icon{ background-size: 50px 50px; width: 60px; height: 60px;  }
+
+/********************/
+/*** SIZE: MEDIUM ***/
+/********************/
+a.lkloginbtn.medium, div.processing.medium{ min-width: 45px; min-height: 45px; padding: 1px 3px; }
+a.lkloginbtn.medium span.text{ font-size: 15px; padding: 0 14px 0 45px; line-height: 45px; }
+a.lkloginbtn.medium span.icon{ background-size: 35px 35px; width: 45px; height: 45px; }
+
+/*******************/
+/*** SIZE: SMALL ***/
+/*******************/
+a.lkloginbtn.small, div.processing.small{ min-width: 40px; min-height: 40px; padding: 0px 2px; }
+a.lkloginbtn.small span.text{ font-size: 12px; padding: 0 14px 0 40px; line-height: 40px; }
+a.lkloginbtn.small span.icon{ background-size: 28px 28px; width: 40px; height: 40px; }
+
+/*******************/
+/*** COLOR: DARK ***/
+/*******************/
+a.lkloginbtn.dark{ background-color: #333; }
+a.lkloginbtn.dark:hover{ background-color: #444; }
+
+/*******************/
+/*** COLOR: LIGHT ***/
+/*******************/
+a.lkloginbtn.light{ background-color: #efefef; }
+a.lkloginbtn.light:hover{ background-color: #fafafa; }
+a.lkloginbtn.light span.text{ color: #555; }
+
+/** END BUTTONS **/
+
+/** LOGIN MESSAGE BOX **/
+.launchkey-login-message {text-align:center; display: block; margin: 5px auto;}
+
+/** LOGIN PROGRESS **/
+.launchkey-login-progress-bar { text-align:center; visibility:hidden; margin: 10px auto;}
+.launchkey-login-progress-bar.launchkey-active {visibility:visible;}
+.launchkey-spinner {background: url('spinner.gif') no-repeat; display:inline-block; height:16px; width:16px; margin-bottom:-3px;}
+.launchkey-spinner-processing.launchkey-hide {display: inline-block;}
+
+/** STATUS **/
+.launchkey-error-block {padding:10px;background-color:#ffdfdd;border:1px solid #ced9ea;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;}
+.launchkey-status-indicator { border-style:solid; border-width:1px; border-color:#ddd; background-color:#eee; float:left; margin:0em 1em 0.5em 0em; padding:0.25em 0.5em; text-align:center; width:200px; }
+.launchkey-admin-alert {padding:10px;background-color:#990000;color:#cccccc;font-weight:bold}
+.launchkey-hide {display:none;}
+.launchkey-box-green {background-color: #66ff66}
+.launchkey-box-yellow {background-color: #ffff66}
+.launchkey-box-red {background-color: #ff9999}
+
+/** WIZARD **/
+.launchkey-wizard-container {padding: 0 20px 0 0;}
+.header.launchkey-wizard h1 {line-height: normal;}
+.launchkey-qr-code {margin: 10px 0;}
+
+/** WIZARD SMALL GRID **/
+.launchkey-two-col {width:100%; display:block; padding: 5px; vertical-align: top;max-width: 460px;}
+@media (min-width: 600px) {
+	.launchkey-two-col {width: 47%; display: inline-block;}
+}
+
+/** PROFILE **/
+.launchkey-description {margin-top: 5px;}
+
+/** ACTIVATE PROMPT BANNER **/
+.launchkey-activate-banner.updated {display:block; padding:16px 8px; background-color:#f8efcd; color:#333; font-size:15px; border-color:#ffd202;}
+a.launchkey-activate-banner-btn {background-color:#eaeaea; color: #222; border-top: 1px solid #fff; border-left: 1px solid #fff; border-bottom: 1px solid #bbb; border-right: 1px solid #bbb; border-radius:3px; padding:6px 12px; margin-right:20px;font-size: 14px;}
+a.launchkey-activate-banner-btn:hover {background-color:#eee; color: #000;}
+
+/* SETTINGS/WIZARD HEADER */
+#launchkey-wizard-header {display: none;}
+.lk-wizard #launchkey-wizard-header {display: inline-block;}
+#launchkey-settings-header {display: inline-block;}
+.lk-wizard #launchkey-settings-header {display: none;}
+.launchkey-header {border-bottom: 1px solid #CFCFCF;color:#414141; padding: 1em 0 0.5em 0;}
+.launchkey-header h2 {font-size: 2em;color: #414141;display: inline-block;}
+.launchkey-header p {display: inline-block;margin: 0;}
+.launchkey-header .useful-links {padding-top: 25px;}
+@media (min-width: 1185px) {
+	.launchkey-header .useful-links {float: right;}
+}
+.launchkey-header .useful-links a {display: inline-block; border-right: 1px solid #A8A8A8; padding: 0 9px; text-decoration: none;}
+.launchkey-header .useful-links a:last-of-type {border-right: none;}
+
+/* WIZARD INTRO */
+.launchkey-intro-headline {font-size: 2.3em;color: #414141;line-height: normal;}
+.lk-big-white-btn {color: #414141;background-color: #fff; font-size: 1.3em; padding: 1em 2.5em;text-decoration: none;display: block;max-width: 140px;display: block;border: solid 1px #CECECE; border-radius: 6px;margin: 3em auto 0 auto;}
+.lk-big-white-btn:hover {background-color: #ECECEC;color:#000;}
+
+/* GENERAL HELPER CLASSES */
+.lk-fouc {display: none;}
+.lk-inline-block {display: inline-block;vertical-align: top;}
+.lk-center {text-align: center;}
+.lk-left {text-align: left;}
+.lk-no-margin {margin: 0;}
+.lk-margin-top {margin-top: 2em;}
+.lk-padding-top {padding-top: 2em;}
+.lk-margin-left-indent {margin-left: 35px;}
+.max-width-500 {max-width: 500px;margin: auto;}
+.light-grey-large {font-size: 18px;color:#666666;font-weight: 300;margin-left: auto;margin-right:auto;max-width: 1000px;}
+.light-grey-bold {color:#555555; font-weight: bold;font-size: 17px;}
+[data-view] {display: none;}
+[data-accordion-content] {display: none;}
+.lk-content {margin-right: 2em;}
+
+/* WIZARD */
+.lk-content a {color: #19a2e7;text-decoration: none;}
+.lk-content a:hover {color: #35BBFF;text-decoration: none;}
+.lk-headline-container {padding: 50px 0 10px 0;}
+.lk-white-panel {border: solid 1px #CECECE; border-radius: 3px; background-color: #fff;padding: 5em 4em; max-width: 750px;margin: 2em auto;}
+.lk-details {display: inline;background-color: #fff;border: solid 1px #CECECE; border-radius: 6px;color:#858585 !important;margin-left: 0.5em;cursor: pointer;font-size: 15px; padding: 3px 13px;}
+.lk-details:hover {background-color: #ECECEC;}
+.lk-accordion-container {margin-left: 3em; padding-left: 2em; border-left: solid 2px #E0E0E0;margin-bottom: 2em;}
+.lk-accordion-container p {line-height: 2.5em;font-size: 14px;color: #555555;}
+.step-headline {text-indent: -35px;margin-left: 35px;font-size: 17px;font-weight: 300;color:#555555;}
+.lk-big-number {font-weight: 300;font-size: 40px; color: #555555;vertical-align: bottom;top:11px;position: relative;}
+.lk-indent {margin-left: 15px;}
+a.lk-next {font-weight:bold;text-decoration:none;border-radius:4px;border: solid 1px #CECECE;color: #000;background-color: #fff;padding: 12px 8px;font-size: 16px;  margin: 0 0 0 auto;display: block;max-width: 90px;text-align: center;}
+a.lk-next:hover {background-color: #ECECEC;color:#000;}
+a {cursor: pointer;}
+.lk-two-panel {display: inline-block;width: 40%; background-color: #fff;border-radius:4px;border: solid 1px #CECECE;vertical-align: top;padding: 1em 3em;position: relative;
+	margin: 30px;
+	max-width: 400px;
+	height: 340px;
+}
+.lk-two-panel .lk-copy-fixed-height {height: 140px;}
+@media (max-width: 1298px) {
+	.lk-two-panel {
+		padding: 2em;
+		height: auto;
+		width: 90%;
+		margin: 15px auto;
+		display: block;
+	}
+	.lk-two-panel .lk-copy-fixed-height {
+		height: auto;
+	}
+}
+.lk-three-panel {display: inline-block;width: 25%; background-color: #fff;border-radius:4px;border: solid 1px #CECECE;vertical-align: top;padding: 1em 3em;position: relative;
+	margin: 30px;
+	max-width: 300px;
+	height: 340px;
+}
+.lk-three-panel .lk-copy-fixed-height {height: 140px;}
+@media (max-width: 1298px) {
+	.lk-three-panel {
+		padding: 2em;
+		height: auto;
+		width: 90%;
+		margin: 15px auto;
+		display: block;
+	}
+	.lk-three-panel .lk-copy-fixed-height {
+		height: auto;
+	}
+}
+a.lk-blue-btn, input.lk-blue-btn {width:auto;background-color: #0072ac; color: #fff; border-radius: 4px;font-size: 15px;padding: 10px 15px;text-decoration: none;display: inline-block;border-width: 0;}
+a.lk-blue-btn:hover {color: #fff;background-color: #1A92CF;}
+.lk-blue {color: #0072ac;font-size: 18px;}
+.lk-headline {font-size: 21px;color:#555555;}
+.lk-back-link {font-size: 16px;text-decoration: none;margin-top: 1.5em;display: inline-block;}
+.lk-submit-processing {}
+
+/* WIZARD BG IMAGES */
+.lk-login-graphic {background: transparent url('login-flow-diagram.png') no-repeat;height: 303px; width: 671px; max-width: 100%; background-size: 100% 100%;}
+.lk-wizard-logo {background: transparent url('launchkey-wizard-icon.png') no-repeat;height: 116px;width: 100px;background-size: 100% 100%;display: block;margin: 75px auto 45px auto;}
+.lk-success-check {background: transparent url('check-mark.png') no-repeat;width: 133px;height: 127px;background-size: 100% 100%;display: block; margin: 95px auto -35px auto;}
+
+/* WIZARD CAUTION BOX */
+.lk-caution-box {color: #fff; background-color: #23282e;max-width: 1000px;padding: 2em;margin: 5em auto 0 auto;}
+.lk-caution-box p {margin: 0}
+p.lk-notice-headline {font-size: 19px;font-weight: bold;}
+p.lk-notice-copy {font-weight: 300;font-size: 15px;margin-bottom: 1em;}
+
+/* WIZARD VERIFY USERNAME FORM */
+.lk-verify-form {display: block;margin: 3em auto;padding: 20px;background-color: #fff;border-radius: 4px;border: solid 1px #CECECE;text-align: center;max-width: 350px;}
+.lk-verify-form input.lk-blue-btn {display: inline-block;}
+.lk-verify-form input[type=text].lk-text-input {display: inline-block;margin: 0 13px 0 0; width: 200px;}
+
+/* WIZARD FORM */
+.lk-label {color: #0072ac;font-weight: bold;display: block;margin-bottom: 5px;margin-left: 35px;}
+input[type=text].lk-text-input {background-color: #e9e9e9;border: solid 1px #d9d9d9;display: block;box-shadow: none;width: 300px;max-width:100%;padding: 8px;margin-bottom: 25px;}
+
+/* WIZARD CODE SNIPPET */
+.lk-code-snippet {display: inline-block;margin: auto;background-color: #23282e;color: #fff; font-size: 14px; padding: 7px 40px;width: auto;}
+
+/* WIZARD BREADCRUMBS */
+@media (max-width: 1410px) {
+	.lk-breadcrumb {
+		display: none;
+	}
+}
+.lk-breadcrumb {list-style: none; overflow: hidden;margin-top: 0;margin-bottom: 0;border-bottom: solid 1px #CFCFCF;}
+.lk-breadcrumb li {float: left;margin-bottom: 0;}
+.lk-breadcrumb li a {color: #fff;text-decoration: none; padding: 10px 0 10px 42px;background: #234c61;position: relative; display: block;float: left;font-size: 12px;}
+.lk-breadcrumb li a:hover {color: #fff;}
+.lk-breadcrumb li:first-of-type a {padding-left: 13px;}
+.lk-breadcrumb li a:after {content: " "; display: block; width: 0; height: 0;border-top: 50px solid transparent;border-bottom: 50px solid transparent;border-left: 30px solid #234c61;position: absolute;top: 50%;margin-top: -50px; left: 100%;z-index: 2; }
+.lk-breadcrumb li a:before {content: " "; display: block; width: 0; height: 0;border-top: 50px solid transparent;border-bottom: 50px solid transparent;border-left: 30px solid #fff;position: absolute;top: 50%;margin-top: -50px; margin-left: 1px;left: 100%;z-index: 1; }
+.lk-breadcrumb li a.active {background-color: #0071ac;}
+.lk-breadcrumb li a.active:after {border-top: 50px solid transparent;border-bottom: 50px solid transparent;border-left: 30px solid #0071ac;}
+.lk-breadcrumb li a.green {background-color: #78af2a;}
+.lk-breadcrumb li a.green:after {border-top: 50px solid transparent;border-bottom: 50px solid transparent;border-left: 30px solid #78af2a;}
+
+/* WIZARD PRE_REQUISITE CHECKS */
+ul.lk-prerequisite-list {font-size: 19px;font-weight: bold;}
+ul.lk-prerequisite-list li {vertical-align:middle;margin-bottom:.5em}
+ul.lk-prerequisite-list li .lk-icon {background: transparent no-repeat;width:2em;height:2em;background-size: 100% 100%;display: inline-block;margin:.5em .5em -.5em auto}
+ul.lk-prerequisite-list li .lk-icon.pass {background-image: url('check-mark.png')}
+ul.lk-prerequisite-list li .lk-icon.fail {background-image: url('x-mark.png')}
+
+
+/* LK SETTINGS */
+h2.lk-bold {color: #444;font-weight: bold;margin-top: 2.7em;}
+.lk-setting {margin: 2em 0 3.5em 0;}
+.lk-setting input[type=text] {width: 275px;font-size: 16px;}
+.lk-setting label {padding-bottom:10px;color: #444;display: inline-block;vertical-align:top;width: 150px;font-size: 16px;font-weight: bold;}
+.lk-setting p {font-size: 15px;color: #444;font-weight: 300;margin: 0;}
+p.lk-setting-help {color: #7f7f7f;font-style: italic;font-weight: normal;font-size: 14px;max-width: 400px;}
+
+
+/* DEPRECATION NOTICE */
+.launchkey-deprecation-banner {display:block;padding:16px 8px;color: #DC3232;}
+.launchkey-deprecation-banner a {color: #ff5900}

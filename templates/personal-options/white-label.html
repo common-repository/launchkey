@@ -1,0 +1,145 @@
+<h3>%%%app_display_name%%% Options</h3>
+<table class="form-table">
+    <tbody>
+    <tr>
+        <th><label>Status</label></th>
+        <td>
+            <div>
+                <span id="launchkey-paired-status" class="launchkey-status-indicator"></span>
+                <span id="launchkey-pair-button" class="button" style="width: 10em; height: 2em; vertical-align: middle; text-align: center">Pair</span>
+                <span id="processing" class="hidden" style="width: 10em; height: 2em;"></span>
+            </div>
+            <div class="launchkey-description hidden unpaired">
+                <br>
+                In order to use the %%%app_display_name%%% app to secure your WordPress account, you must first pair
+                one or more devices with your account.<br/>
+                Click "Pair" to generate a one-time use code code that will be used to pair a device using the
+                %%%app_display_name%%% app.
+            </div>
+            <div class="launchkey-description hidden paired">
+                <br>
+                Click "Pair" to generate a one-time use code code that will be used to pair another device to your
+                WordPress account using the %%%app_display_name%%% app.
+            </div>
+            <div class="launchkey-description hidden unpaired">
+                <br/>Note: Once paired, you will be able to remove your WordPress password and prevent password based
+                login with your user.
+            </div>
+
+            <div id="pairing" class="hidden" style="margin-top: 2em">
+                <div>
+                    <img id="launchkey-pairing-qrcode" alt="" />
+                </div>
+                <div>
+                    Scan the QR Code with the %%%app_display_name%%% app to pair automatically or use the code
+                    <strong id="launchkey-pairing-manual-code"></strong> to manually pair your device with this account.
+                </div>
+            </div>
+
+            <div id="launchkey-pair-error" class="hidden launchkey-error-block">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <th><label>WordPress Password</label></th>
+        <td>
+            <div id="launchkey-no-password" class="hidden">
+                <span class="launchkey-status-indicator launchkey-box-green">Removed</span>
+                <span class="launchkey-description">
+                    Use form fields below to add password<br/>
+                    Hint: If you need to re-enable password based login but cannot login with %%%app_display_name%%%,
+                    you can perform password reset via the login screen at any time.
+                </span>
+            </div>
+            <div id="launchkey-has-password" class="hidden">
+                <span class="launchkey-status-indicator launchkey-box-yellow">Active</span>
+                <a href="%%%password_remove_uri%%%" title="Click here to remove your WordPress password">
+                    Remove WordPress password
+                </a>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script type="application/javascript">
+    (function ($) {
+        var processing = false,
+            paired = '%%%paired%%%' === 'true',
+            nonce = '%%%nonce%%%',
+            has_password = '%%%has_password%%%' === 'true',
+            pair_uri = '%%%pair_uri%%%',
+            update_status = function () {
+                if (paired) {
+                    $("#launchkey-paired-status")
+                            .removeClass('launchkey-box-red')
+                            .addClass('launchkey-box-green')
+                            .html('Paired');
+                    $(".unpaired").hide();
+                    $(".paired").show();
+                } else {
+                    $("#launchkey-paired-status")
+                            .removeClass('launchkey-box-green')
+                            .addClass('launchkey-box-red')
+                            .html('Not Paired');
+                    $(".paired").hide();
+                    $(".unpaired").show();
+                }
+            };
+
+        if (has_password) {
+            $("#launchkey-no-password").hide();
+            $("#launchkey-has-password").show();
+        } else {
+            $("#launchkey-has-password").hide();
+            $("#launchkey-no-password").show();
+        }
+
+        update_status();
+
+
+        $("#launchkey-pair-button").click(function () {
+            var $button = $(this),
+                $processing = $('#processing'),
+                timerID,
+                counter = 0,
+                timer = function () {
+                    counter++;
+                    $button.hide();
+                    $processing.html('Processing' + '.....'.substr(0, counter % 5)).show();
+                    timerID = window.setTimeout(timer, 250);
+                };
+            if (processing) {
+                return;
+            }
+            processing = true;
+            $('#pairing').hide();
+            timer();
+
+            $.post(pair_uri, {nonce: nonce})
+            .done(function (data) {
+                if (data.error) {
+                    $('#launchkey-pair-error').html(data.error).show();
+                } else if (data.qrcode) {
+                    paired = true;
+                    $('#launchkey-pairing-manual-code').html(data.code);
+                    $('img#launchkey-pairing-qrcode').attr('src', data.qrcode);
+                    $('#pairing').show();
+                } else {
+                    $('#launchkey-pair-error').html('An unknown error occurred.  Please try again later.').show();
+                }
+                nonce = data.nonce;
+                update_status();
+            })
+            .fail(function (jqXHR, textStatus, errorThrown) {
+                $('#launchkey-pair-error').html('An error occurred processing your transaction.  Please try again later.');
+            })
+            .always(function () {
+                processing = false;
+                window.clearTimeout(timerID);
+                $processing.hide();
+                $button.show();
+            });
+        });
+
+    }(jQuery));
+</script>

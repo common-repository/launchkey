@@ -1,0 +1,1153 @@
+<noscript><p style="color:red;">You need Javascript enabled to view this page.</p></noscript>
+<!--[if IE]><p style="color:red;">You need a <a target="_blank" href="http://browsehappy.com/">modern browser</a> for
+    this plugin to work properly.</p><![endif]-->
+
+<script id="lk-error-template" type="text/x-custom-template">
+    <div class="error notice is-dismissible lk-error">
+        <p>%%%</p>
+        <button type="button" class="notice-dismiss">
+            <span class="screen-reader-text">Dismiss this notice.</span>
+        </button>
+    </div>
+</script>
+
+<script id="lk-notice-template" type="text/x-custom-template">
+    <div class="updated notice is-dismissible lk-error">
+        <p>%%%</p>
+        <button type="button" class="notice-dismiss">
+            <span class="screen-reader-text">Dismiss this notice.</span>
+        </button>
+    </div>
+</script>
+
+<!-- Header -->
+<div class="launchkey-header lk-content lk-fouc">
+    <div class="lk-inline-block" id="launchkey-wizard-header">
+        <h2>LaunchKey Setup Wizard</h2>
+    </div>
+    <div class="lk-inline-block" id="launchkey-settings-header">
+        <h2>LaunchKey Settings </h2>
+        <a data-view-link="wizard-home" class="lk-blue-btn lk-margin-left-indent" href="#wizard-home">Restart Setup Wizard</a>
+    </div>
+
+    <div class="useful-links">
+        <p>Useful LaunchKey links: </p>
+        <a target="_blank" href="https://dashboard.launchkey.com/login">Dashboard</a>
+        <a target="_blank" href="https://docs.launchkey.com/">Documentation</a>
+        <a target="_blank" href="https://docs.launchkey.com/user/mobile-app-guide/index.html">Mobile User Guide</a>
+        <a target="_blank" href="https://launchkey.com/support">Support</a>
+    </div>
+</div>
+
+<!-- Wizard - Home -->
+<div data-view="wizard-home" class="lk-center max-width-500">
+    <div class="lk-wizard-logo"></div>
+    <h2 class="launchkey-intro-headline">Hi there. Let's get started.</h2>
+
+    <p class="light-grey-large">
+        You're just moments away from eliminating the hassle and risk of passwords from WordPress. This setup wizard
+        will guide you through the setup and configuration process with LaunchKey.
+    </p>
+
+    <p class="light-grey-large">
+        If you haven't done so already, you'll need to install the <em>FREE</em> LaunchKey Mobile Authenticator on your
+        smartphone or tablet. LaunchKey Mobile Authenticator is available in the
+        <a target="_blank" href="http://georiot.co/launchkey">Apple App Store</a> or
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.launchkey">Google Play</a>.
+    </p>
+
+    <p class="light-grey-large">
+        If you need help, or just want to learn more about the LaucnhKey Mobile Authenticator, check out our
+        <a target="_blank" href="https://docs.launchkey.com/user/mobile-app-guide/index.html">Mobile App Guide</a>.
+    </p>
+
+    <p class="light-grey-large">
+        <em>When you're ready to begin, click the button below.</em>
+    </p>
+
+    <a class="lk-big-white-btn" href="#wizard-3" data-view-breadcrumb="1" data-view-link="wizard-3">
+        Begin Setup
+    </a>
+</div>
+
+
+<!-- Wizard - Select Configuration Method -->
+<div data-view="wizard-config-method" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a class="active">Configuration Method</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Configuration Method</h2>
+            <p class="light-grey-large">Select the configuration method:</p>
+        </div>
+        <div class="lk-three-panel">
+            <p class="lk-headline lk-left">LaunchKey MFA</p>
+
+            <p class="lk-left light-grey-large lk-copy-fixed-height">
+                Use this wizard for configuring a standard multi-factor implementation.
+                <em>If you are not sure which option to choose, this is likely the correct option.</em>
+            </p>
+            <a class="lk-blue-btn" data-view-link="wizard-easy-setup-check" href="#wizard-easy-setup-check">
+                Start MFA Wizard
+            </a>
+        </div>
+        <div class="lk-three-panel">
+            <p class="lk-headline lk-left">LaunchKey Single Sign On</p>
+
+            <p class="lk-left light-grey-large lk-copy-fixed-height">
+                Use this wizard if you are adding this site to your LaunchKey Single Sign On implementation.
+            </p>
+            <a class="lk-blue-btn" data-view-link="wizard-sso-5" href="#wizard-sso-5">
+                Start SSO Wizard
+            </a>
+        </div>
+        <div class="lk-three-panel">
+            <p class="lk-headline lk-left">Manual Configuration</p>
+
+            <p class="lk-left light-grey-large lk-copy-fixed-height">
+                Manually configure your site without any assistance from the Wizard.
+            </p>
+            <a class="lk-blue-btn" data-view-link="settings" href="#settings">Configure Manually</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Wizard - Easy Setup Check -->
+<div data-view="wizard-easy-setup-check" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Method</a></li>
+        <li><a class="active">Easy Setup Check</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Easy Setup Check</h2>
+
+            <p class="light-grey-large">
+                <em>Easy Setup</em> is the quick and easy way to set up your WordPress site using the LaunchKey Mobile
+                Authenticator. If your mobile device has <em>Easy Setup</em>, it is highly suggected you choose that
+                optopin.
+            </p>
+        </div>
+
+        <div class="lk-two-panel">
+            <p class="lk-headline lk-left">Easy Setup</p>
+
+            <p class="lk-left light-grey-large lk-copy-fixed-height">
+                This wizard require <em>Easy Setup</em> to be available on your device. If you have a menu item
+                named <em>Easy Setup</em> in the main menu for the LaunchKey Mobile authenticator, you may
+                select this option.
+            </p>
+            <a class="lk-blue-btn" data-view-link="wizard-easy-setup" href="#wizard-easy-setup">
+                Easy Setup
+            </a>
+        </div>
+        <div class="lk-two-panel">
+            <p class="lk-headline lk-left">Classic Wizard</p>
+
+            <p class="lk-left light-grey-large lk-copy-fixed-height">
+                Use this option if you do not have <em>Easy Setup</em> on your LaunchKey Mobile Authenticator or
+                are having issues completing the setup with <em>Easy Setup</em>.
+            </p>
+            <a class="lk-blue-btn" data-view-link="wizard-3" href="#wizard-3">
+                Classic Wizard Setup
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- Wizard - Easy Setup -->
+<div data-view="wizard-easy-setup" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Type</a></li>
+        <li><a data-view-link="wizard-easy-setup-check" href="#wizard-easy-setup-check">Easy Setup Check</a></li>
+        <li><a class="active">Easy Setup</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Easy Setup Check</h2>
+
+            <p class="light-grey-large">
+                If you LaunchKey Mobile Authenticator has <em>Easy Setup</em> in the main menu, select the menu item and
+                click <em>Next</em>; otherwise, <em>No Easy Setup</em>.
+        </div>
+    </div>
+    <div class="lk-white-panel">
+        <p class="step-headline">
+            <span class="lk-big-number">1.</span> Click the <em>Load</em> button to generate the QR Code for the mobile
+            device.
+            <button data-launchkey-qr-code-reload="data-launchkey-qr-code-reload" class="lk-details">Load</button>
+        </p>
+        <div class="lk-qr-code lk-center"></div>
+        <p class="step-headline">
+            <span class="lk-big-number">2.</span> Scan the QR Code and follow the prompts. When that process is
+            completed, click <em>Next</em>
+        </p>
+    </div>
+    <div class="lk-content">
+        <a id="wizard-easy-setup-next" data-view-link="wizard-8" class="lk-next" href="#wizard-8">Next</a>
+    </div>
+    </div>
+</div>
+
+<!-- 3rd View of Wizard -->
+<div data-view="wizard-3" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Type</a></li>
+        <li><a data-view-link="wizard-easy-setup-check" href="#wizard-easy-setup-check">Easy Setup Check</a></li>
+        <li><a class="active">Log in to Dashboard</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Next, log in to LaunchKey Dashboard</h2>
+
+            <p class="light-grey-large">Follow these steps:</p>
+        </div>
+    </div>
+    <div class="lk-white-panel">
+        <p class="step-headline">
+            <span class="lk-big-number">1.</span> In a new browser tab or window, navigate to
+            <a target="_blank" href="https://dashboard.launchkey.com">https://dashboard.launchkey.com</a>
+        </p>
+
+        <p class="step-headline">
+            <span class="lk-big-number">2.</span> In the input field, enter the LaunchKey username you chose previously
+            and press enter
+        </p>
+
+        <p class="step-headline">
+            <span class="lk-big-number">3.</span> An authorization request will be pushed to your mobile device. Approve
+            the request within LaunchKey Mobile by sliding the LaunchKey icon up
+            <a data-accordion="3-3" class="lk-details">Details</a>
+        </p>
+
+        <div class="lk-accordion-container" data-accordion-content="3-3">
+            <p>With LaunchKey, instead of providing a website or application with a password for login, an
+                authentication request is pushed to your mobile device for you to authorize through the LaunchKey mobile
+                app. Once you authenticate and authorize the request through LaunchKey Mobile, you will be automatically
+                logged in. <strong>You will use LaunchKey Mobile to log in to WordPress in the same manner.</strong></p>
+
+            <div class="lk-login-graphic"></div>
+            <p>For more details on how to use receive &amp; respond to requests using LaunchKey Mobile, visit: <a
+                    target="_blank" href="https://docs.launchkey.com/user/mobile-app-guide/launch-requests.html">https://docs.launchkey.com/user/mobile-app-guide/launch-requests.html</a>
+            </p>
+        </div>
+    </div>
+    <div class="lk-content">
+        <a data-view-link="wizard-5" class="lk-next" href="#wizard-5">Next</a>
+    </div>
+</div>
+
+<!-- 5th View of Wizard (Standard) -->
+<div data-view="wizard-5" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Type</a></li>
+        <li><a data-view-link="wizard-easy-setup-check" href="#wizard-easy-setup-check">Easy Setup Check</a></li>
+        <li><a data-view-link="wizard-3" href="#wizard-3">Log in to Dashboard</a></li>
+        <li><a class="active">Create Application</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Okay, let's create an Application for your WordPress site</h2>
+
+            <p class="light-grey-large">To ensure your WordPress site can communicate with the LaunchKey service, you
+                need to create a LaunchKey Application within Dashboard. An Application represents your WordPress site within
+                LaunchKey, and it's where you can manage and configure the way your WordPress site interacts with the
+                LaunchKey API and users, as well as where you'll find keys and other LaunchKey data.</p>
+
+            <p class="light-grey-large lk-margin-top">Follow these steps:</p>
+        </div>
+    </div>
+    <div class="lk-white-panel">
+        <p class="step-headline">
+            <span class="lk-big-number">1.</span> Create a new Application by navigating to <a target="_blank"
+                                                                                          href="https://dashboard.launchkey.com/my/newapp">https://dashboard.launchkey.com/my/newapp</a>
+        </p>
+
+        <p class="step-headline">
+            <span class="lk-big-number">2.</span> Choose a name, description, and avatar that represents this WordPress
+            site.
+            <a data-accordion="5-2" class="lk-details">Details</a>
+        </p>
+
+        <div class="lk-accordion-container" data-accordion-content="5-2">
+            <p>This information will be visible to LaunchKey users anytime they receive a login request from your
+                WordPress site. You can change these details at anytime.</p>
+
+            <p class="lk-indent"><strong>Name</strong> - Enter a unique name that reflects the name or URL of this
+                WordPress site</p>
+
+            <p class="lk-indent"><strong>Description</strong> - (<em>optional</em>) Enter a brief description</p>
+
+            <p class="lk-indent"><strong>Avatar</strong> - (<em>optional</em>) Upload a GIF, JPG, or PNG image that
+                represents your WordPress site or branding</p>
+        </div>
+        <p class="step-headline">
+            <span class="lk-big-number">3.</span> Submit the form by clicking the <em>Create Application</em> button.
+            <a data-accordion="5-3" class="lk-details">Details</a>
+        </p>
+
+        <div class="lk-accordion-container" data-accordion-content="5-3">
+            <p>Read and agree to the Developer Terms of Service, and then click Create Application to submit the form.</p>
+        </div>
+    </div>
+    <div class="lk-center">
+        <p class="light-grey-large">Once you've completed and submitted the form, click the <em>Next</em> button to move
+            on.</p>
+    </div>
+    <div class="lk-content">
+        <a data-view-link="wizard-6" class="lk-next" href="#wizard-6">Next</a>
+    </div>
+</div>
+
+<!-- 6th View of Wizard -->
+<div data-view="wizard-6" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Type</a></li>
+        <li><a data-view-link="wizard-easy-setup-check" href="#wizard-easy-setup-check">Easy Setup Check</a></li>
+        <li><a data-view-link="wizard-3" href="#wizard-3">Log in to Dashboard</a></li>
+        <li><a data-view-link="wizard-5" href="#wizard-5">Create Application</a></li>
+        <li><a class="active">Add Callback URL</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Add this Callback URL to your Application</h2>
+
+            <p class="light-grey-large"><a data-accordion="6-1" data-accordion-hide-trigger="6-1"
+                                           data-accordion-hide="6-1">View more information</a></p>
+
+            <p class="light-grey-large" data-accordion-content="6-1">Once a login authorization request has been sent to
+                your user, your WordPress site will leverage a technology called Server Side Events to wait for an
+                authorization response from your user. To do this, your Application will post resonses to your WordPress site
+                using the Callback URL below. Add this URL to the configuration options of your Application. <a
+                        data-accordion="6-1" data-accordion-hide-trigger="6-1">View less</a></p>
+
+            <p class="light-grey-bold lk-margin-top">Your Callback URL is:</p>
+
+            <p class="lk-code-snippet">%%%callback_url%%%</p>
+
+            <p class="light-grey-large lk-margin-top">Follow these instructions:</p>
+        </div>
+    </div>
+    <div class="lk-white-panel">
+        <p class="step-headline">
+            <span class="lk-big-number">1.</span> If you're not already on the details page of your new Application, click on
+            the menu icon within Dashboard, select <em>Applications</em>, and click on the name of the Application you just
+            created.
+        </p>
+
+        <p class="step-headline">
+            <span class="lk-big-number">2.</span> In the <em>General</em> tab within the <em>Configuration</em> section,
+            copy and paste the URL above into the input next to <em>Callback URL</em>.
+        </p>
+    </div>
+    <div class="lk-center">
+        <div class="lk-margin-top">
+            <p class="light-grey-large">Changes to your Application are saved automatically. Click Next to proceed.</p>
+        </div>
+    </div>
+    <div class="lk-content">
+        <a data-view-link="wizard-7" class="lk-next" href="#wizard-7">Next</a>
+    </div>
+</div>
+
+<!-- 7th View of Wizard -->
+<div data-view="wizard-7" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Type</a></li>
+        <li><a data-view-link="wizard-easy-setup-check" href="#wizard-easy-setup-check">Easy Setup Check</a></li>
+        <li><a data-view-link="wizard-3" href="#wizard-3">Log in to Dashboard</a></li>
+        <li><a data-view-link="wizard-5" href="#wizard-5">Create Application</a></li>
+        <li><a data-view-link="wizard-6" href="#wizard-6">Add Callback URL</a></li>
+        <li><a class="active">Configure Keys</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Almost done! Configure this plugin with keys from your Application</h2>
+
+            <p class="light-grey-large lk-margin-top">Follow these steps:</p>
+        </div>
+    </div>
+
+    <div class="lk-white-panel">
+        <form method="post" id="lk-wizard-keys-form" enctype="multipart/form-data" autocomplete="off">
+            <input type="hidden" name="implementation_type" value="native" id="wizard_implementation_type">
+            <input type="hidden" name="app_display_name" value="LaunchKey" id="wizard_app_display_name">
+
+            <p class="step-headline">
+                <span class="lk-big-number">1.</span> Click on the <em>Keys</em> tab within your Application details page
+                inside Dashboard.
+            </p>
+
+            <p class="step-headline">
+                <span class="lk-big-number">2.</span> Copy the value next to <em><strong>Application</strong> Key</em> and
+                paste it in the corresponding input field below:
+            </p>
+            <label class="lk-label" for="wizard_keys_rocket_key">Application Key</label>
+            <input class="lk-text-input lk-margin-left-indent" id="wizard_keys_rocket_key" type="text" name="rocket_key"
+                   autocomplete="off" placeholder="e.g. 1234567890" maxlength="10"/>
+
+            <p class="step-headline">
+                <span class="lk-big-number">3.</span> Under the <em>Encryption Keys</em> section, click the <em>New
+                <strong>Secret</strong> Key</em> button and select the <em>View &amp; copy new key</em> option from the
+                dropdown menu. A new Secret Key will be generated and displayed in place of the button. Copy this new
+                key and paste it in the corresponding input field below:
+            </p>
+            <label class="lk-label" for="wizard_keys_secret_key">Secret Key</label>
+            <input class="lk-text-input lk-margin-left-indent" id="wizard_keys_secret_key" type="text" name="secret_key"
+                   autocomplete="off" placeholder="e.g. sb0r7v716ydkqn4y727g4ado26w6oc9r" maxlength="32"/>
+
+            <p class="step-headline">
+                <span class="lk-big-number">4.</span> Also under the <em>Encryption Keys</em> section, click the <em>New
+                <strong>Private</strong> Key</em> button and select the <em>Download new key</em> option from the
+                dropdown menu. Your <em>new <strong>Private</strong> Key</em> will be saved to your computer in a file
+                called <em>LaunchKey.key</em>. Upload the <em>LaunchKey.key</em> file here by clicking the button below:
+            </p>
+            <label class="lk-label" for="wizard_keys_private_key">Private Key</label>
+            <input class="lk-margin-left-indent" type="file" id="wizard_keys_private_key" name="private_key">
+            <!-- Hidden ssl_verify -->
+            <div class="launchkey-hide">
+                <input type="checkbox" id="wizard_ssl_verify" name="ssl_verify" checked="checked">
+            </div>
+        </form>
+    </div>
+
+    <div class="lk-center">
+        <div class="lk-margin-top">
+            <p class="light-grey-large">After you've supplied the <strong>3 keys</strong> needed above, click the <em>Next</em>
+                button to save these keys and proceed.</p>
+        </div>
+    </div>
+    <div class="lk-content">
+        <a data-launchkey-submit="lk-wizard-keys-form" class="lk-next">Next
+            <div class="launchkey-hide launchkey-spinner"></div>
+        </a>
+    </div>
+</div>
+
+<!-- 8th View of Wizard -->
+<div data-view="wizard-8" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a class="active">Verify Configuration</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Finally, let's verify everything is working</h2>
+
+            <p class="light-grey-large lk-margin-top">In order to verify that your WordPress site can now initiate
+                authorization requests using LaunchKey, initiate a request by entering your <strong>LaunchKey
+                    username</strong> below, click <em>Verify</em>, and authorize the request on your mobile device. An
+                authorization request will be pushed to your mobile device containing the Application name, description, and
+                avatar you chose earlier.</p>
+        </div>
+    </div>
+    <div class="lk-verify-form">
+
+        <form id="verify-native-form" class="lk-standard-only" autocomplete="off">
+            <input id="username" type="text" class="lk-text-input" placeholder="LaunchKey Username" autocomplete="off"/>
+            <input id="verify-native-button" type="submit" class="lk-blue-btn" value="Verify"/>
+        </form>
+
+        <div id="verify-processing" class="launchkey-hide lk-margin-top">
+            <p class="lk-inline-block lk-no-margin">Processing</p>
+
+            <div class="launchkey-spinner"></div>
+        </div>
+        <div id="verify-success" class="launchkey-hide lk-margin-top">
+            <p class="lk-no-margin">Congratulations! You have successfully configured the LaunchKey WordPress
+                Plugin!</p>
+        </div>
+    </div>
+    <div class="lk-content">
+        <a data-view-link="wizard-9" class="lk-next" style="display:none;" href="#wizard-9">Next</a>
+    </div>
+</div>
+
+<!-- 9th and Final View of Wizard -->
+<div data-view="wizard-9" class="lk-content">
+    <div class="lk-success-check"></div>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Finished!</h2>
+
+            <p class="light-grey-large">Congrats, LaunchKey has been configured with your WordPress site.</p> <strong>
+            <p class="light-grey-large light-grey-bold">
+                To log in to WordPress with LaunchKey, simply submit the login form with your standard WordPress
+                username, <em><strong>%%%wp_username%%%</strong></em>.
+            </p>
+
+            <h2 class="launchkey-intro-headline">Setting Up Other Users</h2>
+
+            <p class="light-grey-large">Other users of this WordPress site may activate LaunchKey by enabling LaunchKey
+                within their WordPress profile section. Please notify them accordingly.</p>
+
+            <p class="light-grey-large">Until the remaining users of your WordPress site activate LaunchKey for their
+                user account, they will need to click the <em>Show Password Field</em> link on the login form
+                to enter the password for their user.</p>
+
+            <p class="light-grey-large">Click the <em>Finish</em> button below to proceed to the standard settings and
+                configuration page.</p>
+        </div>
+    </div>
+    <div class="lk-content">
+        <a class="lk-next" onclick="window.location.hash='settings';window.location.reload(true);return false;">Finish</a>
+    </div>
+</div>
+
+
+<!-- 3rd View of Wizard (SSO) -->
+<div data-view="wizard-sso-3" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Type</a></li>
+        <li><a data-view-link="wizard-easy-setup-check" href="#wizard-easy-setup-check">Easy Setup Check</a></li>
+        <li><a class="active">Log in to Dashboard</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Next, log in to LaunchKey Dashboard</h2>
+
+            <p class="light-grey-large">Follow these steps:</p>
+        </div>
+    </div>
+    <div class="lk-white-panel">
+        <p class="step-headline">
+            <span class="lk-big-number">1.</span> In a new browser tab or window, navigate to
+            <a target="_blank" href="https://dashboard.launchkey.com">https://dashboard.launchkey.com</a>
+        </p>
+
+        <p class="step-headline">
+            <span class="lk-big-number">2.</span> In the input field, enter the LaunchKey username you chose previously
+            and press enter
+        </p>
+
+        <p class="step-headline">
+            <span class="lk-big-number">3.</span> An authorization request will be pushed to your mobile device. Approve
+            the request within LaunchKey Mobile by sliding the LaunchKey icon up
+            <a data-accordion="3-3" class="lk-details">Details</a>
+        </p>
+
+        <div class="lk-accordion-container" data-accordion-content="3-3">
+            <p>With LaunchKey, instead of providing a website or application with a password for login, an
+                authentication request is pushed to your mobile device for you to authorize through the LaunchKey mobile
+                app. Once you authenticate and authorize the request through LaunchKey Mobile, you will be automatically
+                logged in. <strong>You will use LaunchKey Mobile to log in to WordPress in the same manner.</strong></p>
+
+            <div class="lk-login-graphic"></div>
+            <p>For more details on how to use receive &amp; respond to requests using LaunchKey Mobile, visit:
+                <a target="_blank" href="https://docs.launchkey.com/user/mobile-app-guide/launch-requests.html">
+                    https://docs.launchkey.com/user/mobile-app-guide/launch-requests.html
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="lk-content">
+        <a data-view-link="wizard-5" class="lk-next" href="#wizard-5">Next</a>
+    </div>
+</div>
+
+<!-- 5th View of Wizard (SSO) -->
+<div data-view="wizard-sso-5" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Type</a></li>
+        <li><a data-view-link="wizard-sso-3" href="#wizard-sso-3">Log in to Dashboard</a></li>
+        <li><a class="active">Pre-Requisites</a></li>
+    </ul>
+    <a data-view-link="wizard-config-method" class="lk-back-link" href="#wizard-config-method">&lt; Choose a different option</a>
+
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">PHP Extension Pre-Requisites</h2>
+        </div>
+    </div>
+    <div class="lk-white-panel">
+        <p class="step-headline">Okay, let's verify that your WordPress site has access to the required PHP
+            extenstions</p>
+        <ul class="lk-prerequisite-list">
+            <li>
+                <div id="wizard-sso-prereq-mcrypt" class="lk-icon %%%mcrypt_pass_fail%%%"></div>
+                MCrypt <a href="http://php.net/manual/en/book.mcrypt.php" target="_blank">(documentation)</a>
+            </li>
+            <li>
+                <div id="wizard-sso-prereq-openssl" class="lk-icon %%%openssl_pass_fail%%%"></div>
+                OpenSSL <a href="http://php.net/manual/en/book.openssl.php" target="_blank">(documentation)</a>
+            </li>
+            <li>
+                <div id="wizard-sso-prereq-curl" class="lk-icon %%%curl_pass_fail%%%"></div>
+                Curl <a href="http://php.net/manual/en/book.curl.php" target="_blank">(documentation)</a>
+            </li>
+            <li>
+                <div id="wizard-sso-prereq-dom" class="lk-icon %%%dom_pass_fail%%%"></div>
+                DOM <a href="http://php.net/manual/en/book.dom.php" target="_blank">(documentation)</a>
+            </li>
+        </ul>
+        <p class="lk-headline %%%show_sso_next%%%">Your site has he required extensions. Press "Next" to continue...</p>
+
+        <p class="lk-headline %%%show_sso_back%%%">Your site does not have the required extensions. Press "Back" to
+            select another option...</p>
+    </div>
+    <div class="lk-content">
+        <a data-view-link="wizard-sso-6" class="lk-next %%%show_sso_next%%%" href="#wizard-sso-6">Next</a>
+        <a data-view-link="wizard-config-method" class="lk-next %%%show_sso_back%%%" href="#wizard-config-method">Back</a>
+    </div>
+</div>
+
+<!-- 6th View of Wizard (SSO) -->
+<div data-view="wizard-sso-6" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Type</a></li>
+        <li><a data-view-link="wizard-sso-3" href="#wizard-sso-3">Log in to Dashboard</a></li>
+        <li><a data-view-link="wizard-sso-5" href="#wizard-sso-5">Pre-Requisites</a></li>
+        <li><a class="active">Setup SSO in LaunchKey</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Okay, let's create a Single Sign On profile for your WordPress
+                site</h2>
+
+            <p class="light-grey-large">A single Sign-On profile tells LaunchKey how to interact with your WordPress
+                site.</p>
+
+            <p class="light-grey-large lk-margin-top">Follow these steps:</p>
+        </div>
+    </div>
+    <div class="lk-white-panel">
+        <p class="step-headline">
+            <span class="lk-big-number">1.</span> Navigate to
+            <a target="_blank" href="https://dashboard.launchkey.com/organizations"><em>Organizations</em>
+            in the LaunchKey Dashboard</a>.
+        </p>
+
+        <p class="step-headline">
+            <span class="lk-big-number">2.</span> Create a new Organization. Existing Organizations can skip to step 3.
+            <a data-accordion="sso-6-2" class="lk-details">Details</a>
+        </p>
+
+        <div class="lk-accordion-container" data-accordion-content="sso-6-2">
+            <p>Follow these steps to create a new Organization.</p>
+            <ol>
+                <li>Click on the <em>New Organization</em> button</li>
+                <li>Enter the following data:
+                    <ul>
+                        <li><strong>Organization Name</strong> - Unique name for your Organization. e.g LaunchKey
+                            WordPress
+                        </li>
+                        <li><strong>First Name</strong> - Your first name</li>
+                        <li>
+                            <strong>Last Name</strong> - Your last name - <em>Not required but strongly encouraged.
+                            Names
+                            are the only way for you to distinguish between individuals in your Organization.</em>
+                        </li>
+                        <li>
+                            <strong>Email Address</strong> - Your email address. This email address will be used for
+                            verifying the creation of this organization. <em>It will be encrypted before being stored
+                            to protect your privacy.</em>
+                        </li>
+                    </ul>
+                </li>
+                <li>Click on the <em>Create Organization</em> button</li>
+                <li>Open the "Create Organization" confirmation email and click the <em>Create Organization</em> button.
+                </li>
+                <li>Login to the LaunchKey Dashboard as instructed</li>
+                <li>Verify that you are in the correct Organization after logging in</li>
+                <li>
+                    Contact LaunchKey via <a href="https://launchkey.com/support" target="_blank">Support</a> to have
+                    Single Sign On enabled for your Organization. <em>Single Sign On is a billable feature.</em>
+                </li>
+            </ol>
+        </div>
+        <p class="step-headline">
+            <span class="lk-big-number">3.</span> Add a Single Sign On Profile for your WordPress site.
+            <a data-accordion="sso-6-3" class="lk-details">Details</a>
+        </p>
+
+        <div class="lk-accordion-container" data-accordion-content="sso-6-3">
+            <p>Follow these steps to create a new Single Sign On profile.</p>
+            <ol>
+                <li>Click the <em>New SSO</em> button in the <em>Single Sign On</em> page of your Organization.</li>
+                <li>Enter the following data into the <em>Basic Information</em> panel:
+                    <ul>
+                        <li>
+                            <strong>Profile Name</strong> - This is the name that a user will select from the Single
+                            Sign On page for your organization. it should be relatively short but distinguishable
+                            from other profiles in this Organization's Single Sign On.
+                        </li>
+                        <li>
+                            <strong>Template</strong>
+                            - Choose <em>LaunchKey WordPress</em></li>
+                    </ul>
+                </li>
+                <li>Read the <em>Developer Terms of Service</em> and click the checkbox to agree.</li>
+                <li>Click the <em>Create SSO</em> button.</li>
+            </ol>
+        </div>
+        <p class="step-headline">
+            <span class="lk-big-number">4.</span> Configure the SSO Profile for your WordPress site.
+            <a data-accordion="sso-6-4" class="lk-details">Details</a>
+        </p>
+
+        <div class="lk-accordion-container" data-accordion-content="sso-6-4">
+            <p>Follow these steps to configure the newly created Single Sign On profile for your WordPress site.</p>
+            <ol>
+                <li>Enter the following data into the <em>Configuration</em> panel of the <em>General</em> tab:
+                    <ul>
+                        <li>
+                            <strong>Entity ID</strong> - This is the unique identifier for this profile within your
+                            organization. A good option for the entity ID would be your site domain.  Remember this
+                            value as it will be needed later when you configure WordPress for this SSO profile.
+                        </li>
+                        <li><strong>Post URL</strong> - Enter <code>%%%sso_post_url%%%</code></li>
+                    </ul>
+                </li>
+                <li>
+                    Verify the role that will be used when auto-creating users.  If an Organization User that has been
+                    mapped in the <em>Users</em> tab that does not exist within WordPress logs in via SSO, a new user
+                    will be created with the mapped username and the role specified in the <em>role</em> attribute
+                    configured in the <em>Attributes</em> tab.
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="lk-center">
+        <p class="light-grey-large">Once you've completed the Single Sign On profile, click the <em>Next</em> button to
+            move on.</p>
+    </div>
+    <div class="lk-content">
+        <a data-view-link="wizard-sso-7" class="lk-next" href="#wizard-sso-7">Next</a>
+    </div>
+</div>
+
+<!-- 7th View of Wizard (SSO) -->
+<div data-view="wizard-sso-7" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Type</a></li>
+        <li><a data-view-link="wizard-sso-3" href="#wizard-sso-3">Log in to Dashboard</a></li>
+        <li><a data-view-link="wizard-sso-5" href="#wizard-sso-5">Pre-Requisites</a></li>
+        <li><a data-view-link="wizard-sso-6" href="#wizard-sso-6">Setup SSO in LaunchKey</a></li>
+        <li><a class="active">Setup SSO in WordPress</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Okay, let's configure your WordPress site for Single Sign On</h2>
+
+            <p class="light-grey-large">Your WordPress site needs know how to communicate with LaunchKey for single
+                Sign-On.</p>
+
+            <p class="light-grey-large lk-margin-top">Follow these steps:</p>
+        </div>
+    </div>
+    <div class="lk-white-panel">
+        <form id="lk-wizard-sso-idp-form">
+            <input type="hidden" name="implementation_type" value="sso" id="wizard_sso_implementation_type">
+            <input type="hidden" name="app_display_name" value="LaunchKey" id="wizard_sso_app_display_name">
+
+            <p class="step-headline">
+                <span class="lk-big-number">1.</span> Download the Metadata file for your Single Sign On profile.
+                <a data-accordion="sso-7-1" class="lk-details">Details</a>
+            </p>
+
+            <div class="lk-accordion-container" data-accordion-content="sso-7-1">
+                <p>Follow these steps to download the Metadata file for your Single Sign On profile.</p>
+                <ol>
+                    <li>From your Single Sign On profile, click on the <em>Metadata</em> tab</li>
+                    <li>Click on the <em>Download Metadata</em> button</li>
+                    <li>This will begin the process of downloading the <code>idp.xml</code> Identity Profile file to
+                        your computer.
+                    </li>
+                </ol>
+            </div>
+            <p class="step-headline">
+                <span class="lk-big-number">2.</span> Upload the profile file to your WordPress site:
+            </p>
+            <label class="lk-label" for="wizard_files_sso_idp">SSO Profile File</label>
+            <input class="lk-margin-left-indent" type="file" id="wizard_files_sso_idp" placeholder="e.g. ipm.xml"
+                   name="sso_idp">
+
+            <p class="step-headline">
+                <span class="lk-big-number">3.</span> Enter the <em>Entity ID</em> you specified in <em>Step 4</em> of
+                of the <a href="#wizard-sso-6">Setup SSO in LaunchKey</a> section of the wizard.
+            </p>
+            <label class="lk-label" for="wizard_files_sso_idp">Entity ID</label>
+            <input class="lk-margin-left-indent" type="text" id="wizard_sso_entity_id"
+                   placeholder="e.g. my-wordpress-domain" name="sso_entity_id">
+        </form>
+    </div>
+
+    <div class="lk-center">
+        <div class="lk-margin-top">
+            <p class="light-grey-large">After you've supplied the <strong>Single Sign On profile file location</strong>
+                above, click the <em>Next</em> button to save the profile data and proceed.</p>
+        </div>
+    </div>
+    <div class="lk-content">
+        <a data-launchkey-submit="lk-wizard-sso-idp-form" class="lk-next">Next
+            <div class="launchkey-hide launchkey-spinner"></div>
+        </a>
+    </div>
+</div>
+
+<!-- 8th View of Wizard (SSO) -->
+<div data-view="wizard-sso-8" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Type</a></li>
+        <li><a data-view-link="wizard-sso-3" href="#wizard-sso-3">Log in to Dashboard</a></li>
+        <li><a data-view-link="wizard-sso-5" href="#wizard-sso-5">Pre-Requisites</a></li>
+        <li><a data-view-link="wizard-sso-6" href="#wizard-sso-6">Setup SSO in LaunchKey</a></li>
+        <li><a data-view-link="wizard-sso-7" href="#wizard-sso-7">Setup SSO in WordPress</a></li>
+        <li><a class="active">Map Your User</a></li>
+    </ul>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Okay, let's map your WordPress user in Single Sign On</h2>
+
+            <p class="light-grey-large">The Single Sign On profile needs to map you user in its LaunchKey Organization
+                with the user the WordPress site.</p>
+
+            <p class="light-grey-large lk-margin-top">Follow these steps:</p>
+        </div>
+    </div>
+    <div class="lk-white-panel">
+        <p class="step-headline">
+            <span class="lk-big-number">1.</span> From the Single Sign On profile, click on the <em>Users</em> tab.
+        </p>
+
+        <p class="step-headline">
+            <span class="lk-big-number">2.</span> Enter the value <code>%%%wp_username%%%</code> in the input box next
+            to your user in the list.
+        </p>
+
+        <p class="step-headline">
+            <span class="lk-big-number">3.</span> Click the <em>Save</em> button or remove focus from the input box to
+            save the mapping.
+        </p>
+    </div>
+
+    <div class="lk-content">
+        <a data-view-link="wizard-sso-9" class="lk-next" href="#wizard-sso-9">Next</a>
+    </div>
+</div>
+
+<!-- 9th and Final View of Wizard (SSO) -->
+<div data-view="wizard-sso-9" class="lk-content">
+    <ul class="lk-breadcrumb">
+        <li><a data-view-link="wizard-config-method" href="#wizard-config-method">Configuration Type</a></li>
+        <li><a data-view-link="wizard-sso-3" href="#wizard-sso-3">Log in to Dashboard</a></li>
+        <li><a data-view-link="wizard-sso-5" href="#wizard-sso-5">Pre-Requisites</a></li>
+        <li><a data-view-link="wizard-sso-6" href="#wizard-sso-6">Setup SSO in LaunchKey</a></li>
+        <li><a data-view-link="wizard-sso-7" href="#wizard-sso-7">Setup SSO in WordPress</a></li>
+        <li><a data-view-link="wizard-sso-8" href="#wizard-sso-8">Map Your User</a></li>
+        <li><a class="green">Finished!</a></li>
+    </ul>
+    <div class="lk-success-check"></div>
+    <div class="lk-center">
+        <div class="lk-headline-container">
+            <h2 class="launchkey-intro-headline">Finished!</h2>
+
+            <p class="light-grey-large">Congrats, LaunchKey Single Sign On and your WordPress site have been configured.
+                <strong>To log in to WordPress with LaunchKey Single Sign On, simply click the "Login with LaunchKey"
+                    button on the login form.</strong></p>
+        </div>
+    </div>
+    <div class="lk-white-panel">
+        <h2 class="launchkey-intro-headline">Setting Up Other Users</h2>
+
+        <p class="light-grey-large">
+            Other users of this WordPress site can be mapped with users in the Organization.
+            <a data-accordion="sso-9-1" class="lk-details">Details</a>
+        </p>
+
+        <div class="lk-accordion-container" data-accordion-content="sso-9-1">
+            <p>Follow these steps to map additional users:</p>
+            <ol>
+                <li>Log into the <a href="https://dashboard.launchkey.com">LaunchKey Dashboard</a>.</li>
+                <li>From the main menu, select <em>Organizations</em>.</li>
+                <li>Click on the tile for the Organization under which you configured your SSO profile.</li>
+                <li>Click on the <em>Users</em> link at the top of the Organization's page.</li>
+                <li>
+                    To add the users:
+                    <ol>
+                        <li>Click the <em>New User</em> button.</li>
+                        <li>
+                            Enter the following data:
+                            <ul>
+                                <li><strong>First name</strong> First name of the user to add to your organization.</li>
+                                <li><strong>Last name</strong> Last name of the user to add to your organization.</li>
+                                <li><strong>Email address</strong> Email address of the user to add to your organization.</li>
+                            </ul>
+                        </li>
+                        <li>Press the <em>Invite</em> button.  The user will receive an email request to join the Organization.</li>
+                        <li>Repeat until all users have been added.</li>
+                    </ol>
+                </li>
+                <li>Scroll to the <em>Single Sign On</em> section and click the single sign on configuration for your WordPress installation.</li>
+                <li>Click on the <em>Users</em> tab.</li>
+                <li>Enter the user names for the WordPress site in the input box next to their Organization user name to map their account. If
+                the user name does not exist in the WordPress installation, it will be automatically created once they log in with SSO
+                and select your WordPress site from the application list. If the user is created by the LaunchKey plugin,
+                the user's role will be the value set on the <em>role</em> key in the <em>Attributes</em> tab.  The value defaults
+                to <strong>admin</strong> when the SSO profile is created.</li>
+            </ol>
+        </div>
+
+        <p class="light-grey-large">Click the <em>Finish</em> button below to proceed to the standard settings and
+            configuration page.</p>
+    </div>
+    <div class="lk-content">
+        <a class="lk-next" onclick="window.location.hash='settings';window.location.reload(true);return false;">Finish</a>
+    </div>
+</div>
+
+<!-- Settings View -->
+<div data-view="settings" class="lk-content">
+    <form id="lk-settings-keys-form">
+        <h2 class="lk-bold">Configuration Details</h2>
+
+        <div class="lk-setting">
+            <label for="settings_form_implementation_type">Type</label>
+            <div class="lk-inline-block">
+                <select id="settings_form_implementation_type" name="implementation_type">
+                    <option value="">Select an option...</option>
+                    <option value="native">LaunchKey MFA</option>
+                    <option value="sso">LaunchKey Single Sign On</option>
+                    <option value="white-label">White Label</option>
+                </select>
+                <button data-accordion="settings-1" class="lk-details">What is this?</button>
+                <div class="lk-setting-help" data-accordion-content="settings-1">
+                    <p>The implementation type for your site:</p>
+
+                    <h3>LaunchKey MFA</h3>
+                    <p>Standard multi-factor authentication utilizing the LaunchKey Authenticator App</p>
+
+                    <h3>LaunchKey Single Sign On</h3>
+                    <p>Multi-factor authentication utilizing the LaunchKey Single Sign On</p>
+
+                    <h3>White Label</h3>
+                    <p>Multi-factor authentication utilizing your own mobile app via the LaunchKey white label SDK</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="launchkey-settings-standard" class="%%%settings-standard-visible%%%">
+            <p>These settings should match the information found within your Application inside
+                <a target="_blank" href="https://dashboard.launchkey.com/">LaunchKey Dashboard</a>
+            </p>
+
+
+            <div class="lk-setting">
+                <label for="settings_form_rocket_key">Application Key</label>
+
+                <div class="lk-inline-block">
+                    <input type="text" name="rocket_key" id="settings_form_rocket_key" value="%%%rocket_key%%%"
+                           placeholder="e.g. 1234567890"/>
+                    <button data-accordion="settings-1" class="lk-details">What is this?</button>
+                    <p class="lk-setting-help" data-accordion-content="settings-1">10 digit Application Key for your
+                        LaunchKey Application</p>
+                </div>
+            </div>
+
+            <div class="lk-setting">
+                <label for="settings_form_secret_key">Secret Key</label>
+
+                <div class="lk-inline-block">
+                    <input type="text" name="secret_key" id="settings_form_secret_key"
+                           placeholder="e.g. 93dksd9fm3dfskfg9sdo3kf"/>
+                    <button data-accordion="settings-2" class="lk-details">What is this?</button>
+                    <p class="lk-setting-help">Current secret key hidden for security</p>
+
+                    <p class="lk-setting-help" data-accordion-content="settings-2">32 character alpha-numeric Secret Key
+                        for your LaunchKey Application</p>
+                </div>
+            </div>
+            <div class="lk-setting">
+                <label for="settings_form_private_key">Private Key</label>
+
+                <div class="lk-inline-block">
+                    <input type="file" name="private_key" id="settings_form_private_key"/>
+                    <button data-accordion="settings-3" class="lk-details">What is this?</button>
+                    <p class="lk-setting-help">Current private key hidden for security</p>
+
+                    <p class="lk-setting-help" data-accordion-content="settings-3">10 digit Application Key for your
+                        LaunchKey Application</p>
+                </div>
+            </div>
+            <div class="lk-setting">
+                <label>Callback URL</label>
+
+                <p class="lk-inline-block">%%%callback_url%%%</p>
+            </div>
+            <a class="lk-blue-btn" data-launchkey-submit="lk-settings-keys-form">Save Changes
+                <div class="launchkey-hide launchkey-spinner"></div>
+            </a>
+
+            <h2 class="lk-bold">Advanced Settings</h2>
+
+            <p>Only modify these settings if you want to implement a non-standard WordPress integration.</p>
+
+            <div class="lk-setting">
+                <label for="adv_ssl_verify">SSL Verify</label>
+
+                <div class="lk-inline-block">
+                    <input class="lk-inline-block" type="checkbox" id="adv_ssl_verify" name="ssl_verify"
+                           %%%ssl_verify_checked%%%>
+
+                    <p class="lk-inline-block">Uncheck this box to disable SSL certificate verification</p>
+
+                    <p class="lk-warning lk-padding-top"><em>
+                        <strong>Warning:</strong> turning off SSL verification may make it impossible to log in with
+                        Launchkey.<br/>
+                        Use this as a last resort due to SSL errors communicating with LaunchKey
+                    </em></p>
+                </div>
+            </div>
+            <!-- WL Only Option -->
+            <div class="lk-white-label-only">
+                <div class="lk-setting">
+                    <label for="wl_display_settings">Display Name</label>
+
+                    <div class="lk-inline-block">
+                        <input type="text" id="wl_display_settings" name="app_display_name" placeholder="LaunchKey"
+                               value="%%%app_display_name%%%">
+                        <button data-accordion="wl_display_settings" class="lk-details">What is this?</button>
+                        <p class="lk-setting-help" data-accordion-content="wl_display_settings">The display name setting
+                            allows you to set the name that will be used to refer to the mobile app that will be used to
+                            pair and authenticate users with this WordPress site. It should be similar if not the same
+                            as the name of your White Label app.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="launchkey-settings-sso">
+            <h2 class="lk-bold">Single Sign On Settings</h2>
+
+            <div class="lk-setting">
+                <label for="settings_form_sso_entity_id">Entity ID</label>
+
+                <div class="lk-inline-block">
+                    <input type="text" name="sso_entity_id" id="settings_form_sso_entity_id" value="%%%sso_entity_id%%%"/>
+                    <button data-accordion="settings-sso-1" class="lk-details">What is this?</button>
+                    <p class="lk-setting-help" data-accordion-content="settings-sso-1">
+                        Unique Identifier for this service in your organization. This value should
+                        match the <strong>Entity ID</strong> in the <strong>Configuration</strong> section of the
+                        <strong>General</strong> tab in your SSO details page.
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="lk-bold">Single Sign On Metadata</h2>
+
+            <p>
+                These settings come from the <strong>Metadata</strong> tab in your SSO details page for
+                the Single Sign On profile in your Organization in the
+                <a target="_blank" href="https://dashboard.launchkey.com/">LaunchKey Dashboard</a>.
+            </p>
+
+            <div class="lk-setting">
+                <label for="settings_form_sso_idp">Update Metadata</label>
+
+                <div class="lk-inline-block">
+                    <input type="file" name="sso_idp" id="settings_form_sso_idp" placeholder="e.g. ipm.xml"/>
+                    <button data-accordion="settings-sso-1" class="lk-details">What is this?</button>
+                    <p class="lk-setting-help" data-accordion-content="settings-sso-1">
+                        You may update your SSO metadata by uploading a new <code>idp.xml</code> file that
+                        is downloaded by clicking on the <strong>Download Metadata</strong> button in the
+                        <strong>Metadata</strong> tab in your SSO details page.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lk-setting">
+                <label>Post URL</label>
+
+                <div class="lk-inline-block">
+                    <p class="lk-inline-block">%%%sso_post_url%%%</p>
+                    <button data-accordion="settings-sso-2" class="lk-details">What is this?</button>
+                    <p class="lk-setting-help" data-accordion-content="settings-sso-2">
+                        This value must be set in <strong>Post URL</strong> field in the <strong>Configuration</strong>
+                        section of the <strong>General</strong> tab in your SSO details page.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lk-setting">
+                <label>SSO Login URL</label>
+
+                <div class="lk-inline-block">
+                    <p class="lk-inline-block">%%%sso_login_url%%%</p>
+                    <button data-accordion="settings-sso-4" class="lk-details">What is this?</button>
+                    <p class="lk-setting-help" data-accordion-content="settings-sso-4">
+                        This is the URL to which users will be redirected when they click the "Log in with LaunchKey"
+                        button on the Login page. The URL must match the <strong>Login URL</strong>
+                        field in the <strong>Metadata</strong> tab in your SSO details page.
+                    </p>
+
+                    <p class="lk-setting-help" data-accordion-content="settings-sso-4">
+                        <strong>If this data does not match, you will need to update via the
+                            update metadata field.</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="lk-setting">
+                <label>SSO Logout URL</label>
+
+                <div class="lk-inline-block">
+                    <p class="lk-inline-block">%%%sso_logout_url%%%</p>
+                    <button data-accordion="settings-sso-5" class="lk-details">What is this?</button>
+                    <p class="lk-setting-help" data-accordion-content="settings-sso-5">
+                        This is the URL to which users will be redirected when they log out of WordPress.
+                        The URL must match the <strong>Logout URL</strong> field in the
+                        <strong>Metadata</strong> tab in your SSO details page.
+                    </p>
+
+                    <p class="lk-setting-help" data-accordion-content="settings-sso-5">
+                        <strong>If this data does not match, you will need to update via the
+                            update metadata field.</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="lk-setting">
+                <label>SSO Error URL</label>
+
+                <div class="lk-inline-block">
+                    <p class="lk-inline-block">%%%sso_error_url%%%</p>
+                    <button data-accordion="settings-sso-6" class="lk-details">What is this?</button>
+                    <p class="lk-setting-help" data-accordion-content="settings-sso-6">
+                        This is the URL to which users will be redirected when they encounter an error
+                        logging into WordPress via SSO. The URL must match the <strong>Logout URL</strong> field in the
+                        <strong>Metadata</strong> tab in your SSO details page.
+                    </p>
+
+                    <p class="lk-setting-help" data-accordion-content="settings-sso-6">
+                        <strong>If this data does not match, you will need to update via the
+                            update metadata field.</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="lk-setting">
+                <label>Certificate</label>
+
+                <div class="lk-inline-block">
+                    <button data-accordion="settings-sso-3-cert" class="lk-details">Show Certificate</button>
+                    <pre data-accordion-content="settings-sso-3-cert">%%%sso_public_key%%%</pre>
+                    <button data-accordion="settings-sso-3" class="lk-details">What is this?</button>
+                    <p class="lk-setting-help" data-accordion-content="settings-sso-3">
+                        This is the RSA public key certificate that is used to verify SAML requests
+                        from the LaunchKey SSO server. The certificate must match the <strong>Certificate</strong>
+                        in the <strong>Metadata</strong> tab in your SSO details page.
+                    </p>
+
+                    <p class="lk-setting-help" data-accordion-content="settings-sso-3">
+                        <strong>If this data does not match, you will need to update via the
+                            update metadata field.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+    <a class="lk-blue-btn" data-launchkey-submit="lk-settings-keys-form">Save Changes
+        <div class="launchkey-hide launchkey-spinner"></div>
+    </a>
+</div>
